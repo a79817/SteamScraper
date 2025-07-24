@@ -14,7 +14,7 @@ async function fetchPage(itemName, start = 0) {
     const encodedItem = encodeURIComponent(itemName);
     const url = `${BASE_LISTING_URL}/${encodedItem}/render/?start=${start}&count=100&country=PT&language=portuguese&currency=3`;
 
-    console.log(`📦 A obter [${itemName}] de ${start} a ${start + count}...`);
+    console.log(`📦 A obter [${itemName}] de ${start} a ${start + 100}...`);
 
     try {
         const response = await fetch(url, {
