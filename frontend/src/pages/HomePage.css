@@ -1,0 +1,108 @@
+.homepage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--color-bg-light);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.hero-section h2 {
+  color: var(--color-text-bright);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.search-section {
+  background-color: var(--color-bg-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.custom-select {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  flex-grow: 1;
+  min-width: 150px;
+}
+
+.search-bar {
+  display: flex;
+  flex-grow: 2;
+  min-width: 250px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  background-color: var(--color-bg-dark);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.search-bar button {
+  padding: 0 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg-dark);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1.2rem;
+  display: grid;
+  place-items: center;
+}
+
+.search-bar button:hover {
+  background-color: #8dd1f9;
+}
+
+.search-bar button:disabled {
+  background-color: var(--color-bg-lighter);
+  cursor: not-allowed;
+}
+
+.results-section {
+  /* Estilos para a área de resultados */
+}
+
+.loader, .no-results {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
