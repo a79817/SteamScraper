@@ -1,0 +1,526 @@
+// glock18_skins.js
+
+const glock18Skins = {
+  Covert: [
+    { name: "Glock-18 | Gamma Doppler", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Bullet Queen", source: "Prisma 2 Case" },
+    { name: "Glock-18 | Neo-Noir", source: "Operation Broken Fang Case" },
+    { name: "Glock-18 | Wasteland Rebel", source: "Gamma Case" },
+    { name: "Glock-18 | Gold Toof", source: "Gallery Case" },
+  ],
+  Classified: [
+    { name: "Glock-18 | Snack Attack", source: "Operation Riptide Case" },
+    { name: "Glock-18 | Vogue", source: "Fracture Case" },
+    { name: "Glock-18 | Twilight Galaxy", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Water Elemental", source: "Operation Breakout Weapon Case" },
+    { name: "Glock-18 | AXIA", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Shinobu", source: "Fever Case" },
+  ],
+  Restricted: [
+    { name: "Glock-18 | Block-18", source: "Kilowatt Case" },
+    { name: "Glock-18 | Umbral Rabbit", source: "Revolution Case" },
+    { name: "Glock-18 | Nuclear Garden", source: "Nuke Souvenir Packages (2018/2019)" },
+    { name: "Glock-18 | Moonrise", source: "Clutch Case" },
+    { name: "Glock-18 | Ramese's Reach", source: "Anubis Collection / Paris 2023 Souvenir" },
+    { name: "Glock-18 | Synth Leaf", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Pink DDPAT", source: "Mirage Souvenir Packages (2021/2022)" },
+    { name: "Glock-18 | Franklin", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Fade", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Weasel", source: "Gamma 2 Case" },
+    { name: "Glock-18 | Grinder", source: "Operation Vanguard Weapon Case" },
+    { name: "Glock-18 | Dragon Tattoo", source: "CS:GO Weapon Case" },
+    { name: "Glock-18 | Royal Legion", source: "Operation Wildfire Case" },
+    { name: "Glock-18 | Brass", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Steel Disruption", source: "eSports 2014 Summer Case" },
+    { name: "Glock-18 | Glockingbird", source: "Not obtainable from containers" },
+  ],
+  MilSpec: [
+    { name: "Glock-18 | Winterized", source: "Recoil Case" },
+    { name: "Glock-18 | Clear Polymer", source: "Snakebite Case" },
+    { name: "Glock-18 | Sacrifice", source: "CS20 Case" },
+    { name: "Glock-18 | Candy Apple", source: "DreamHack 2013 / EMS One 2014 Souvenir" },
+    { name: "Glock-18 | Off World", source: "Spectrum 2 Case" },
+    { name: "Glock-18 | Bunsen Burner", source: "Falchion Case" },
+    { name: "Glock-18 | Warhawk", source: "Horizon Case" },
+    { name: "Glock-18 | Ironwork", source: "Glove Case" },
+    { name: "Glock-18 | Reactor", source: "Cache Souvenir Packages 2014" },
+    { name: "Glock-18 | Catacombs", source: "Chroma Case" },
+    { name: "Glock-18 | Wraiths", source: "Shadow Case" },
+    { name: "Glock-18 | Blue Fissure", source: "CS:GO Weapon Case 3" },
+    { name: "Glock-18 | Oxide Blaze", source: "Danger Zone Case" },
+    { name: "Glock-18 | Teal Graf", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Coral Bloom", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Green Line", source: "Austin 2025 Train Souvenir Package" },
+  ],
+  Industrial: [
+    { name: "Glock-18 | High Beam", source: "Inferno Souvenir Packages (2018/2019)" },
+    { name: "Glock-18 | Red Tire", source: "Vertigo Souvenir Packages (2021/2022)" },
+    { name: "Glock-18 | Sand Dune", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Death Rattle", source: "Not obtainable from containers" },
+    { name: "Glock-18 | Night", source: "Overpass Souvenir Packages (2014)" },
+    { name: "Glock-18 | Groundwater", source: "Mirage Souvenir Packages (2014)" },
+    { name: "Glock-18 | Ocean Topo", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = glock18Skins;
+
+// desert_eagle_skins.js
+
+const desertEagleSkins = {
+  Covert: [
+    { name: "Desert Eagle | Ocean Drive", source: "Operation Riptide Case" },
+    { name: "Desert Eagle | Printstream", source: "Fracture Case" },
+    { name: "Desert Eagle | Code Red", source: "Horizon Case" },
+    { name: "Desert Eagle | Golden Koi", source: "Operation Bravo Case" },
+  ],
+  Classified: [
+    { name: "Desert Eagle | Fennec Fox", source: "Mirage Souvenir Packages 2021/2022" },
+    { name: "Desert Eagle | Mecha Industries", source: "Danger Zone Case" },
+    { name: "Desert Eagle | Kumicho Dragon", source: "Operation Wildfire Case" },
+    { name: "Desert Eagle | Conspiracy", source: "Operation Breakout Weapon Case" },
+    { name: "Desert Eagle | Cobalt Disruption", source: "eSports 2013 Winter Case" },
+    { name: "Desert Eagle | Hypnotic", source: "CS:GO Weapon Case" },
+    { name: "Desert Eagle | Heat Treated", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Starcade", source: "Not obtainable from containers" },
+  ],
+  Restricted: [
+    { name: "Desert Eagle | Trigger Discipline", source: "Snakebite Case" },
+    { name: "Desert Eagle | Light Rail", source: "Prisma Case" },
+    { name: "Desert Eagle | Emerald Jörmungandr", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Directive", source: "Gamma 2 Case" },
+    { name: "Desert Eagle | Blaze", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Sunset Storm 壱", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Naga", source: "Chroma Case" },
+    { name: "Desert Eagle | Hand Cannon", source: "Cobblestone Souvenir Packages 2014" },
+    { name: "Desert Eagle | Crimson Web", source: "eSports 2014 Summer Case" },
+    { name: "Desert Eagle | Pilot", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Sunset Storm 弐", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Heirloom", source: "CS:GO Weapon Case 3" },
+    { name: "Desert Eagle | Mulberry", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Serpent Strike", source: "Fever Case" },
+  ],
+  MilSpec: [
+    { name: "Desert Eagle | Sputnik", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Night Heist", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Blue Ply", source: "Prisma 2 Case" },
+    { name: "Desert Eagle | Oxide Blaze", source: "Spectrum Case" },
+    { name: "Desert Eagle | Corinthian", source: "Revolver Case" },
+    { name: "Desert Eagle | Bronze Deco", source: "Chroma 2 Case" },
+    { name: "Desert Eagle | Meteorite", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Urban Rubble", source: "Train Souvenir Packages 2015" },
+    { name: "Desert Eagle | Calligraffiti", source: "Gallery Case" },
+    { name: "Desert Eagle | Mint Fan", source: "Not obtainable from containers" },
+  ],
+  Industrial: [
+    { name: "Desert Eagle | Midnight Storm", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Night", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Mudder", source: "DreamHack/EMS One 2013–2014 Souvenir Packages" },
+    { name: "Desert Eagle | The Bronze", source: "Not obtainable from containers" },
+    { name: "Desert Eagle | Urban DDPAT", source: "Overpass Souvenir Packages 2014" },
+    { name: "Desert Eagle | Tilted", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = desertEagleSkins;
+
+// dual_berettas_skins.js
+
+const dualBerettasSkins = {
+  Classified: [
+    { name: "Dual Berettas | Melondrama", source: "Dreams & Nightmares Case" },
+    { name: "Dual Berettas | Twin Turbo", source: "Inferno Souvenir Packages 2018/2019" },
+    { name: "Dual Berettas | Cobra Strike", source: "Operation Hydra Case" },
+  ],
+  Restricted: [
+    { name: "Dual Berettas | Flora Carnivora", source: "Recoil Case" },
+    { name: "Dual Berettas | Cobalt Quartz", source: "Souvenir Packages 2013/2014" },
+    { name: "Dual Berettas | Dezastre", source: "Operation Broken Fang Case" },
+    { name: "Dual Berettas | Royal Consorts", source: "Glove Case" },
+    { name: "Dual Berettas | Duelist", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Hemoglobin", source: "CS:GO Weapon Case 2" },
+    { name: "Dual Berettas | Urban Shock", source: "Chroma Case" },
+    { name: "Dual Berettas | Sweet Little Angels", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Hydro Strike", source: "Gallery Case" },
+    { name: "Dual Berettas | Marina", source: "Winter Offensive Weapon Case" },
+    { name: "Dual Berettas | Demolition", source: "Vertigo Souvenir Packages 2019" },
+  ],
+  MilSpec: [
+    { name: "Dual Berettas | Cartel", source: "Operation Wildfire Case" },
+    { name: "Dual Berettas | Emerald", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Ventilators", source: "Chroma 3 Case" },
+    { name: "Dual Berettas | Dualing Dragons", source: "Shadow Case" },
+    { name: "Dual Berettas | Hideout", source: "Kilowatt Case" },
+    { name: "Dual Berettas | Panther", source: "CS:GO Weapon Case 3" },
+    { name: "Dual Berettas | Tread", source: "Operation Riptide Case" },
+    { name: "Dual Berettas | Elite 1.6", source: "CS20 Case" },
+    { name: "Dual Berettas | Balance", source: "Shattered Web Case" },
+    { name: "Dual Berettas | Shred", source: "Horizon Case" },
+    { name: "Dual Berettas | Retribution", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Black Limba", source: "Operation Bravo Case" },
+    { name: "Dual Berettas | Anodized Navy", source: "Inferno Souvenir Packages 2014" },
+  ],
+  Industrial: [
+    { name: "Dual Berettas | Stained", source: "Souvenir Packages 2013/2014" },
+    { name: "Dual Berettas | Drift Wood", source: "Mirage Souvenir Packages 2021/2022" },
+    { name: "Dual Berettas | Switch Board", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Pyre", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Polished Malachite", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Rose Nacre", source: "Not obtainable from containers" },
+  ],
+  Consumer: [
+    { name: "Dual Berettas | Colony", source: "Train Souvenir Packages 2015" },
+    { name: "Dual Berettas | Contractor", source: "Souvenir Packages 2013/2014" },
+    { name: "Dual Berettas | Oil Change", source: "Vertigo Souvenir Packages 2021/2022" },
+    { name: "Dual Berettas | Heist", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Moon in Libra", source: "Not obtainable from containers" },
+    { name: "Dual Berettas | Briar", source: "Cobblestone Souvenir Packages 2014" },
+    { name: "Dual Berettas | BorDeux", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = dualBerettasSkins;
+
+// usp_skins.js
+
+const uspSkins = {
+  Covert: [
+    { name: "USP-S | Printstream", source: "Recoil Case" },
+    { name: "USP-S | The Traitor", source: "Snakebite Case" },
+    { name: "USP-S | Neo-Noir", source: "Spectrum Case" },
+    { name: "USP-S | Kill Confirmed", source: "Shadow Case" },
+  ],
+  Classified: [
+    { name: "USP-S | Whiteout", source: "Not obtainable from containers" },
+    { name: "USP-S | Monster Mashup", source: "Operation Broken Fang Case" },
+    { name: "USP-S | Cortex", source: "Clutch Case" },
+    { name: "USP-S | Jawbreaker", source: "Kilowatt Case" },
+    { name: "USP-S | Target Acquired", source: "Not obtainable from containers" },
+    { name: "USP-S | Caiman", source: "Huntsman Weapon Case" },
+    { name: "USP-S | Serum", source: "CS:GO Weapon Case 2" },
+  ],
+  Restricted: [
+    { name: "USP-S | Ticket to Hell", source: "Dreams & Nightmares Case" },
+    { name: "USP-S | Orange Anolis", source: "Dust II Souvenir Packages 2021/2022" },
+    { name: "USP-S | Flashback", source: "Danger Zone Case" },
+    { name: "USP-S | Cyrex", source: "Glove Case" },
+    { name: "USP-S | Orion", source: "Not obtainable from containers" },
+    { name: "USP-S | Road Rash", source: "Overpass Souvenir Packages 2014" },
+    { name: "USP-S | Guardian", source: "Operation Phoenix Weapon Case" },
+    { name: "USP-S | Dark Water", source: "CS:GO Weapon Case" },
+    { name: "USP-S | Overgrowth", source: "Operation Bravo Case" },
+    { name: "USP-S | Ancient Visions", source: "Ancient Souvenir Packages 2021/2022" },
+    { name: "USP-S | Bleeding Edge", source: "Not obtainable from containers" },
+    { name: "USP-S | Royal Guard", source: "Not obtainable from containers" },
+  ],
+  MilSpec: [
+    { name: "USP-S | Black Lotus", source: "Operation Riptide Case" },
+    { name: "USP-S | Purple DDPAT", source: "Mirage Souvenir Packages 2021/2022" },
+    { name: "USP-S | Check Engine", source: "Inferno Souvenir Packages 2018/2019" },
+    { name: "USP-S | Blueprint", source: "Operation Hydra Case" },
+    { name: "USP-S | Lead Conduit", source: "Operation Wildfire Case" },
+    { name: "USP-S | Torque", source: "Falchion Case" },
+    { name: "USP-S | Stainless", source: "CS:GO Weapon Case 3" },
+    { name: "USP-S | Night Ops", source: "Souvenir Packages 2013/2014" },
+    { name: "USP-S | Business Class", source: "Not obtainable from containers" },
+    { name: "USP-S | Blood Tiger", source: "eSports 2014 Summer Case" },
+    { name: "USP-S | Alpine Camo", source: "Not obtainable from containers" },
+    { name: "USP-S | 27", source: "Gallery Case" },
+    { name: "USP-S | Tropical Breeze", source: "Not obtainable from containers" },
+    { name: "USP-S | PC-GRN", source: "Fever Case" },
+  ],
+  Industrial: [
+    { name: "USP-S | Royal Blue", source: "Cobblestone Souvenir Packages 2014" },
+    { name: "USP-S | Pathfinder", source: "Not obtainable from containers" },
+    { name: "USP-S | Para Green", source: "Not obtainable from containers" },
+    { name: "USP-S | Forest Leaves", source: "Souvenir Packages 2013/2014" },
+    { name: "USP-S | Desert Tactical", source: "Anubis Collection / Paris 2023 Souvenir" },
+  ],
+};
+
+module.exports = uspSkins;
+
+// p2000_skins.js
+
+const p2000Skins = {
+  Covert: [
+    { name: "P2000 | Fire Elemental", source: "Operation Vanguard Weapon Case" },
+  ],
+  Classified: [
+    { name: "P2000 | Wicked Sick", source: "Revolution Case" },
+    { name: "P2000 | Imperial Dragon", source: "Gamma Case" },
+    { name: "P2000 | Ocean Foam", source: "Operation Bravo Case" },
+    { name: "P2000 | Corticera", source: "eSports 2014 Summer Case" },
+  ],
+  Restricted: [
+    { name: "P2000 | Acid Etched", source: "Prisma 2 Case" },
+    { name: "P2000 | Amber Fade", source: "Dust II Souvenir Packages 2014+" },
+    { name: "P2000 | Obsidian", source: "Shattered Web Case" },
+    { name: "P2000 | Woodsman", source: "Operation Hydra Case" },
+    { name: "P2000 | Handgun", source: "Falchion Case" },
+    { name: "P2000 | Scorpion", source: "Not obtainable from containers" },
+    { name: "P2000 | Space Race", source: "Not obtainable from containers" },
+  ],
+  MilSpec: [
+    { name: "P2000 | Gnarled", source: "Fracture Case" },
+    { name: "P2000 | Lifted Spirits", source: "Dreams & Nightmares Case" },
+    { name: "P2000 | Oceanic", source: "Chroma 3 Case" },
+    { name: "P2000 | Imperial", source: "Revolver Case" },
+    { name: "P2000 | Silver", source: "Not obtainable from containers" },
+    { name: "P2000 | Urban Hazard", source: "Clutch Case" },
+    { name: "P2000 | Turf", source: "Glove Case" },
+    { name: "P2000 | Chainmail", source: "Cobblestone Souvenir Packages 2014" },
+    { name: "P2000 | Ivory", source: "Operation Breakout Weapon Case" },
+    { name: "P2000 | Pulse", source: "Huntsman Weapon Case" },
+    { name: "P2000 | Red FragCam", source: "CS:GO Weapon Case 3" },
+    { name: "P2000 | Dispatch", source: "Not obtainable from containers" },
+    { name: "P2000 | Royal Baroque", source: "Not obtainable from containers" },
+    { name: "P2000 | Sure Grip", source: "Fever Case" },
+  ],
+  Industrial: [
+    { name: "P2000 | Panther Camo", source: "Ancient Souvenir Packages 2021/2022" },
+    { name: "P2000 | Granite Marbleized", source: "Souvenir Packages 2013/2014" },
+    { name: "P2000 | Pathfinder", source: "Not obtainable from containers" },
+    { name: "P2000 | Coral Halftone", source: "Not obtainable from containers" },
+    { name: "P2000 | Coach Class", source: "Not obtainable from containers" },
+    { name: "P2000 | Grassland Leaves", source: "Not obtainable from containers" },
+    { name: "P2000 | Grassland", source: "Overpass Souvenir Packages 2014+" },
+    { name: "P2000 | Marsh", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = p2000Skins;
+
+// p250_skins.js
+
+const p250Skins = {
+  Covert: [
+    { name: "P250 | See Ya Later", source: "Spectrum 2 Case" },
+  ],
+  Classified: [
+    { name: "P250 | Visions", source: "Recoil Case" },
+    { name: "P250 | Apep's Curse", source: "Anubis Collection / Paris 2023 Souvenir" },
+    { name: "P250 | Asiimov", source: "Chroma 3 Case" },
+    { name: "P250 | Franklin", source: "Not obtainable from containers" },
+    { name: "P250 | Muertos", source: "Chroma Case" },
+    { name: "P250 | Undertow", source: "CS:GO Weapon Case 3" },
+    { name: "P250 | Cartel", source: "Operation Vanguard Weapon Case" },
+    { name: "P250 | Mehndi", source: "Winter Offensive Weapon Case" },
+    { name: "P250 | Epicenter", source: "Gallery Case" },
+  ],
+  Restricted: [
+    { name: "P250 | Nevermore", source: "Danger Zone Case" },
+    { name: "P250 | X-Ray", source: "X-Ray P250 Package" },
+    { name: "P250 | Cyber Shell", source: "Snakebite Case" },
+    { name: "P250 | Inferno", source: "CS20 Case" },
+    { name: "P250 | Vino Primo", source: "Inferno Souvenir Packages 2018/2019" },
+    { name: "P250 | Supernova", source: "Operation Breakout Weapon Case" },
+    { name: "P250 | Splash", source: "eSports 2013 Case" },
+    { name: "P250 | Red Rock", source: "Operation Hydra Case" },
+    { name: "P250 | Wingshot", source: "Shadow Case" },
+    { name: "P250 | Nuclear Threat", source: "Nuke Souvenir Packages 2014+" },
+    { name: "P250 | Digital Architect", source: "Vertigo Souvenir Packages 2021/2022" },
+  ],
+  MilSpec: [
+    { name: "P250 | Cassette", source: "Fracture Case" },
+    { name: "P250 | Verdigris", source: "Prisma Case" },
+    { name: "P250 | Whiteout", source: "Not obtainable from containers" },
+    { name: "P250 | Exchanger", source: "Nuke Souvenir Packages 2018/2019" },
+    { name: "P250 | Valence", source: "Chroma 2 Case" },
+    { name: "P250 | Ripple", source: "Spectrum Case" },
+    { name: "P250 | Hive", source: "CS:GO Weapon Case 2" },
+    { name: "P250 | Steel Disruption", source: "eSports 2013 Winter Case" },
+    { name: "P250 | Modern Hunter", source: "Not obtainable from containers" },
+    { name: "P250 | Re.built", source: "Revolution Case" },
+    { name: "P250 | Black & Tan", source: "Dust II Souvenir Packages 2021/2022" },
+    { name: "P250 | Bengal Tiger", source: "Not obtainable from containers" },
+    { name: "P250 | Contaminant", source: "Operation Broken Fang Case" },
+    { name: "P250 | Iron Clad", source: "Gamma Case" },
+    { name: "P250 | Small Game", source: "Not obtainable from containers" },
+    { name: "P250 | Red Tide", source: "Not obtainable from containers" },
+  ],
+  Industrial: [
+    { name: "P250 | Crimson Kimono", source: "Not obtainable from containers" },
+    { name: "P250 | Contamination", source: "Cache Souvenir Packages 2014+" },
+    { name: "P250 | Metallic DDPAT", source: "Train Souvenir Packages 2015+" },
+    { name: "P250 | Gunsmoke", source: "Inferno Souvenir Packages 2014+" },
+    { name: "P250 | Dark Filigree", source: "Not obtainable from containers" },
+    { name: "P250 | Facets", source: "Not obtainable from containers" },
+    { name: "P250 | Sedimentary", source: "Not obtainable from containers" },
+    { name: "P250 | Constructivist", source: "Austin 2025 Train Souvenir Package" },
+  ],
+  Consumer: [
+    { name: "P250 | Facility Draft", source: "Nuke Souvenir Packages 2018/2019" },
+    { name: "P250 | Sand Dune", source: "Dust II Souvenir Packages 2014+" },
+    { name: "P250 | Mint Kimono", source: "Not obtainable from containers" },
+    { name: "P250 | Boreal Forest", source: "Souvenir Packages 2013/2014" },
+    { name: "P250 | Drought", source: "Mirage Souvenir Packages 2021/2022" },
+    { name: "P250 | Forest Night", source: "Not obtainable from containers" },
+    { name: "P250 | Bone Mask", source: "Mirage Souvenir Packages 2014+" },
+    { name: "P250 | Copper Oxide", source: "Not obtainable from containers" },
+    { name: "P250 | Plum Netting", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = p250Skins;
+
+
+// tec9_skins.js
+
+const tec9Skins = {
+  Classified: [
+    { name: "Tec-9 | Decimator", source: "Shattered Web Case" },
+    { name: "Tec-9 | Remote Control", source: "Nuke Souvenir Packages 2018/2019" },
+    { name: "Tec-9 | Fuel Injector", source: "Gamma 2 Case" },
+  ],
+  Restricted: [
+    { name: "Tec-9 | Brother", source: "Fracture Case" },
+    { name: "Tec-9 | Bamboozle", source: "Prisma Case" },
+    { name: "Tec-9 | Red Quartz", source: "Train Souvenir Packages 2015" },
+    { name: "Tec-9 | Nuclear Threat", source: "Nuke Souvenir Packages 2014" },
+    { name: "Tec-9 | Re-Entry", source: "Chroma 3 Case" },
+    { name: "Tec-9 | Avalanche", source: "Revolver Case" },
+    { name: "Tec-9 | Titanium Bit", source: "CS:GO Weapon Case 3" },
+    { name: "Tec-9 | Whiteout", source: "Austin 2025 Train Souvenir Package" },
+  ],
+  MilSpec: [
+    { name: "Tec-9 | Fubar", source: "Danger Zone Case" },
+    { name: "Tec-9 | Snek-9", source: "Horizon Case" },
+    { name: "Tec-9 | Cracked Opal", source: "Spectrum 2 Case" },
+    { name: "Tec-9 | Isaac", source: "Huntsman Weapon Case" },
+    { name: "Tec-9 | Brass", source: "Inferno Souvenir Packages 2014" },
+    { name: "Tec-9 | Terrace", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Toxic", source: "Cache Souvenir Packages 2014" },
+    { name: "Tec-9 | Sandstorm", source: "Operation Phoenix Weapon Case" },
+    { name: "Tec-9 | Ice Cap", source: "Gamma Case" },
+    { name: "Tec-9 | Slag", source: "Kilowatt Case" },
+    { name: "Tec-9 | Mummy's Rot", source: "Anubis Collection / Paris 2023 Souvenir" },
+    { name: "Tec-9 | Rebel", source: "Revolution Case" },
+    { name: "Tec-9 | Ossified", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Blast From the Past", source: "Ancient Souvenir Packages 2021/2022" },
+    { name: "Tec-9 | Safety Net", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Flash Out", source: "CS20 Case" },
+    { name: "Tec-9 | Cut Out", source: "Operation Hydra Case" },
+    { name: "Tec-9 | Jambiya", source: "Operation Wildfire Case" },
+    { name: "Tec-9 | Blue Titanium", source: "CS:GO Weapon Case 2" },
+  ],
+  Industrial: [
+    { name: "Tec-9 | Hades", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Orange Murano", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Rust Leaf", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Tiger Stencil", source: "Not obtainable from containers" },
+    { name: "Tec-9 | VariCamo", source: "Dust II Souvenir Packages 2014+" },
+    { name: "Tec-9 | Citric Acid", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Garter-9", source: "Not obtainable from containers" },
+  ],
+  Consumer: [
+    { name: "Tec-9 | Bamboo Forest", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Army Mesh", source: "Souvenir Packages 2013/2014" },
+    { name: "Tec-9 | Urban DDPAT", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Groundwater", source: "Souvenir Packages 2013/2014" },
+    { name: "Tec-9 | Phoenix Chalk", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Tornado", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Raw Ceramic", source: "Not obtainable from containers" },
+    { name: "Tec-9 | Blue Blast", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = tec9Skins;
+
+
+// cz75_skins.js
+
+const cz75Skins = {
+  Covert: [
+    { name: "CZ75-Auto | Victoria", source: "CS:GO Weapon Case 3" },
+  ],
+  Classified: [
+    { name: "CZ75-Auto | Xiangliu", source: "Spectrum Case" },
+    { name: "CZ75-Auto | The Fuschia Is Now", source: "CS:GO Weapon Case 3" },
+    { name: "CZ75-Auto | Yellow Jacket", source: "Falchion Case" },
+  ],
+  Restricted: [
+    { name: "CZ75-Auto | Tacticat", source: "Spectrum 2 Case" },
+    { name: "CZ75-Auto | Syndicate", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Chalice", source: "Cobblestone Souvenir Packages 2014" },
+    { name: "CZ75-Auto | Tigris", source: "Operation Breakout Weapon Case" },
+    { name: "CZ75-Auto | Eco", source: "Horizon Case" },
+    { name: "CZ75-Auto | Red Astor", source: "Chroma 3 Case" },
+    { name: "CZ75-Auto | Pole Position", source: "Chroma 2 Case" },
+    { name: "CZ75-Auto | Slalom", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Tread Plate", source: "CS:GO Weapon Case 3" },
+  ],
+  MilSpec: [
+    { name: "CZ75-Auto | Emerald", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Emerald Quartz", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Crimson Web", source: "CS:GO Weapon Case 3" },
+    { name: "CZ75-Auto | Circaetus", source: "Snakebite Case" },
+    { name: "CZ75-Auto | Vendetta", source: "Operation Broken Fang Case" },
+    { name: "CZ75-Auto | Distressed", source: "Prisma 2 Case" },
+    { name: "CZ75-Auto | Polymer", source: "Glove Case" },
+    { name: "CZ75-Auto | Imprint", source: "Gamma 2 Case" },
+    { name: "CZ75-Auto | Twist", source: "Huntsman Weapon Case" },
+    { name: "CZ75-Auto | Nitro", source: "Overpass Souvenir Packages 2014" },
+    { name: "CZ75-Auto | Poison Dart", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Tuxedo", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Hexane", source: "eSports 2014 Summer Case" },
+  ],
+  Industrial: [
+    { name: "CZ75-Auto | Silver", source: "Ancient Souvenir Packages 2021/2022" },
+    { name: "CZ75-Auto | Midnight Palm", source: "Mirage Souvenir Packages 2021/2022" },
+    { name: "CZ75-Auto | Copper Fiber", source: "Austin 2025 Train Souvenir Package" },
+  ],
+  Consumer: [
+    { name: "CZ75-Auto | Green Plaid", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Framework", source: "Vertigo Souvenir Packages 2021/2022" },
+    { name: "CZ75-Auto | Indigo", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Jungle Dashed", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Army Sheen", source: "Not obtainable from containers" },
+    { name: "CZ75-Auto | Pink Pearl", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = cz75Skins;
+
+// r8_skins.js
+
+const r8Skins = {
+  Covert: [
+    { name: "R8 Revolver | Fade", source: "Revolver Case" },
+  ],
+  Classified: [
+    { name: "R8 Revolver | Skull Crusher", source: "Prisma Case" },
+    { name: "R8 Revolver | Amber Fade", source: "Dust II Souvenir Packages 2014" },
+    { name: "R8 Revolver | Llama Cannon", source: "Spectrum 2 Case" },
+  ],
+  Restricted: [
+    { name: "R8 Revolver | Banana Cannon", source: "Revolution Case" },
+    { name: "R8 Revolver | Crazy 8", source: "Recoil Case" },
+    { name: "R8 Revolver | Reboot", source: "Gamma Case" },
+  ],
+  MilSpec: [
+    { name: "R8 Revolver | Blaze", source: "Not obtainable from containers" },
+    { name: "R8 Revolver | Crimson Web", source: "Revolver Case" },
+    { name: "R8 Revolver | Junk Yard", source: "Snakebite Case" },
+    { name: "R8 Revolver | Bone Forged", source: "Prisma 2 Case" },
+    { name: "R8 Revolver | Memento", source: "Shattered Web Case" },
+    { name: "R8 Revolver | Survivalist", source: "Horizon Case" },
+    { name: "R8 Revolver | Grip", source: "Clutch Case" },
+    { name: "R8 Revolver | Tango", source: "Gallery Case" },
+  ],
+  Industrial: [
+    { name: "R8 Revolver | Nitro", source: "Inferno Souvenir Packages 2018/2019" },
+    { name: "R8 Revolver | Phoenix Marker", source: "Not obtainable from containers" },
+    { name: "R8 Revolver | Leafhopper", source: "Not obtainable from containers" },
+  ],
+  Consumer: [
+    { name: "R8 Revolver | Bone Mask", source: "Not obtainable from containers" },
+    { name: "R8 Revolver | Inlay", source: "Anubis Souvenir Packages 2024" },
+    { name: "R8 Revolver | Desert Brush", source: "Dust II Souvenir Packages 2021/2022" },
+    { name: "R8 Revolver | Canal Spray", source: "Not obtainable from containers" },
+    { name: "R8 Revolver | Night", source: "Ancient Souvenir Packages 2021/2022" },
+    { name: "R8 Revolver | Cobalt Grip", source: "Not obtainable from containers" },
+  ],
+};
+
+module.exports = r8Skins;
