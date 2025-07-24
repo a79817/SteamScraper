@@ -1,12 +1,12 @@
 .homepage {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem; /* Aumenta o espaço vertical entre as seções */
 }
 
 .hero-section {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem; /* Mais padding vertical para impacto */
   background-color: var(--color-bg-light);
   border-radius: 8px;
   border: 1px solid var(--color-border);
@@ -14,13 +14,20 @@
 
 .hero-section h2 {
   color: var(--color-text-bright);
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem; /* Fonte maior */
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .search-section {
   background-color: var(--color-bg-light);
-  padding: 1.5rem;
+  padding: 2rem; /* Mais padding interno */
   border-radius: 8px;
   border: 1px solid var(--color-border);
 }
@@ -28,65 +35,66 @@
 .filter-controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem; /* Mais espaço entre os controlos */
   align-items: center;
+  justify-content: center; /* CENTRA OS CONTROLOS HORIZONTALMENTE */
 }
 
 .custom-select {
   background-color: var(--color-bg-dark);
   color: var(--color-text);
-  padding: 0.75rem;
+  padding: 0.75rem 1rem;
   border: 1px solid var(--color-border);
   border-radius: 4px;
   font-family: inherit;
   font-size: 1rem;
-  flex-grow: 1;
-  min-width: 150px;
+  flex-grow: 1; /* Permite que cresçam */
+  flex-basis: 220px; /* Define uma largura base consistente */
+  min-width: 200px;
+  height: 50px; /* Altura fixa para alinhar com o botão */
+  transition: border-color 0.2s;
 }
 
-.search-bar {
-  display: flex;
-  flex-grow: 2;
-  min-width: 250px;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--color-border);
-  border-right: none;
-  border-radius: 4px 0 0 4px;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text);
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.search-bar input:focus {
+.custom-select:focus {
   outline: none;
   border-color: var(--color-accent);
 }
 
-.search-bar button {
-  padding: 0 1rem;
+.custom-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* O search-bar foi removido, agora estilizamos o botão diretamente */
+.search-button {
+  display: flex; /* Para alinhar ícone e texto */
+  align-items: center;
+  gap: 0.75rem; /* Espaço entre ícone e texto */
+  
+  height: 50px; /* Mesma altura dos selects */
+  padding: 0 1.5rem; /* Padding horizontal */
+  
   background-color: var(--color-accent);
   color: var(--color-bg-dark);
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s;
-  font-size: 1.2rem;
-  display: grid;
-  place-items: center;
+  transition: background-color 0.2s, transform 0.2s;
+  
+  font-size: 1rem;
+  font-weight: 600; /* Texto a negrito */
+  flex-shrink: 0; /* Impede que o botão encolha */
 }
 
-.search-bar button:hover {
+.search-button:hover {
   background-color: #8dd1f9;
+  transform: translateY(-2px); /* Efeito de elevação subtil */
 }
 
-.search-bar button:disabled {
+.search-button:disabled {
   background-color: var(--color-bg-lighter);
   cursor: not-allowed;
+  transform: none;
 }
 
 .results-section {
@@ -95,7 +103,7 @@
 
 .loader, .no-results {
   text-align: center;
-  padding: 3rem;
+  padding: 4rem; /* Mais padding para destaque */
   font-size: 1.2rem;
   color: var(--color-text);
 }

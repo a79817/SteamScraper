@@ -1,5 +1,6 @@
-// glock18_skins.js
+// data/Pistols.js
 
+// Glock-18 Skins
 const glock18Skins = {
   Covert: [
     { name: "Glock-18 | Gamma Doppler", source: "Not obtainable from containers" },
@@ -63,10 +64,7 @@ const glock18Skins = {
   ],
 };
 
-module.exports = glock18Skins;
-
-// desert_eagle_skins.js
-
+// Desert Eagle Skins
 const desertEagleSkins = {
   Covert: [
     { name: "Desert Eagle | Ocean Drive", source: "Operation Riptide Case" },
@@ -122,10 +120,7 @@ const desertEagleSkins = {
   ],
 };
 
-module.exports = desertEagleSkins;
-
-// dual_berettas_skins.js
-
+// Dual Berettas Skins
 const dualBerettasSkins = {
   Classified: [
     { name: "Dual Berettas | Melondrama", source: "Dreams & Nightmares Case" },
@@ -179,10 +174,7 @@ const dualBerettasSkins = {
   ],
 };
 
-module.exports = dualBerettasSkins;
-
-// usp_skins.js
-
+// USP-S Skins
 const uspSkins = {
   Covert: [
     { name: "USP-S | Printstream", source: "Recoil Case" },
@@ -238,10 +230,7 @@ const uspSkins = {
   ],
 };
 
-module.exports = uspSkins;
-
-// p2000_skins.js
-
+// P2000 Skins
 const p2000Skins = {
   Covert: [
     { name: "P2000 | Fire Elemental", source: "Operation Vanguard Weapon Case" },
@@ -289,10 +278,7 @@ const p2000Skins = {
   ],
 };
 
-module.exports = p2000Skins;
-
-// p250_skins.js
-
+// P250 Skins
 const p250Skins = {
   Covert: [
     { name: "P250 | See Ya Later", source: "Spectrum 2 Case" },
@@ -362,11 +348,40 @@ const p250Skins = {
   ],
 };
 
-module.exports = p250Skins;
+// Five-SeveN Skins
+const fiveSevenSkins = {
+  Covert: [
+    { name: "Five-SeveN | Hyper Beast", source: "Operation Hydra Case" },
+  ],
+  Classified: [
+    { name: "Five-SeveN | Case Hardened", source: "CS:GO Weapon Case 2" },
+    { name: "Five-SeveN | Monkey Business", source: "Chroma 2 Case" },
+    { name: "Five-SeveN | Retrobution", source: "Gamma 2 Case" },
+    { name: "Five-SeveN | Scrawl", source: "Kilowatt Case" },
+  ],
+  Restricted: [
+    { name: "Five-SeveN | Fowl Play", source: "Operation Bravo Case" },
+    { name: "Five-SeveN | Urban Hazard", source: "CS:GO Weapon Case 3" },
+    { name: "Five-SeveN | Triumvirate", source: "Revolver Case" },
+    { name: "Five-SeveN | Capillary", source: "Shattered Web Case" },
+  ],
+  MilSpec: [
+    { name: "Five-SeveN | Angry Mob", source: "Prisma Case" },
+    { name: "Five-SeveN | Violent Daimyo", source: "Falchion Case" },
+    { name: "Five-SeveN | Copper Galaxy", source: "Arms Deal Collection" },
+    { name: "Five-SeveN | Nitro", source: "Safehouse Collection" },
+  ],
+  Industrial: [
+    { name: "Five-SeveN | Hot Shot", source: "Inferno 2018 Collection" },
+    { name: "Five-SeveN | Anodized Gunmetal", source: "Office Collection" },
+  ],
+  Consumer: [
+    { name: "Five-SeveN | Contractor", source: "Mirage Collection" },
+    { name: "Five-SeveN | Forest Night", source: "Train Collection" },
+  ]
+};
 
-
-// tec9_skins.js
-
+// Tec-9 Skins
 const tec9Skins = {
   Classified: [
     { name: "Tec-9 | Decimator", source: "Shattered Web Case" },
@@ -425,11 +440,7 @@ const tec9Skins = {
   ],
 };
 
-module.exports = tec9Skins;
-
-
-// cz75_skins.js
-
+// CZ75-Auto Skins
 const cz75Skins = {
   Covert: [
     { name: "CZ75-Auto | Victoria", source: "CS:GO Weapon Case 3" },
@@ -480,10 +491,7 @@ const cz75Skins = {
   ],
 };
 
-module.exports = cz75Skins;
-
-// r8_skins.js
-
+// R8 Revolver Skins
 const r8Skins = {
   Covert: [
     { name: "R8 Revolver | Fade", source: "Revolver Case" },
@@ -523,4 +531,18 @@ const r8Skins = {
   ],
 };
 
-module.exports = r8Skins;
+// Note: Zeus x27 has no skins, so it is not included.
+
+// Export all pistol skin objects
+module.exports = {
+  glock18Skins,
+  desertEagleSkins,
+  dualBerettasSkins,
+  uspSkins,
+  p2000Skins,
+  p250Skins,
+  fiveSevenSkins,
+  tec9Skins,
+  cz75Skins,
+  r8Skins,
+};
