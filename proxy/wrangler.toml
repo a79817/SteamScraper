@@ -1,0 +1,7 @@
+name = "steam-proxy"
+main = "../src/index.mjs"
+type = "javascript"
+
+account_id = "7fbba2723b25c62069db150a55773ef4"
+workers_dev = true
+compatibility_date = "2025-07-24"
