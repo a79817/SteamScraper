@@ -1,33 +1,43 @@
-const { fetchPage } = require('./fetch');
+const { fetchSearchPage } = require('./fetch');
+const cheerio = require('cheerio');
 
-async function listSkinsForWeapon(weaponName) {
-  const skins = new Set();
-  let start = 0;
-  const count = 100;
-  const maxPages = 20;
-  let page = 0;
+/**
+ * Extrai todas as skins de uma arma e os respetivos estados de desgaste.
+ * @param {string} weapon - Nome da arma (ex: "AK-47")
+ * @returns {Promise<Map<string, Set<string>>>}
+ */
+async function listAllSkinsWithWear(weapon) {
+  const skinMap = new Map();
+  const maxPages = Infinity; // Segurança extra, Steam mostra 43 no máximo
+  const count = 10; // Steam limita a 10 resultados por página
 
-  while (page < maxPages) {
-    const data = await fetchPage(weaponName, start, count);
-    if (!data || !data.assets || !data.assets["730"] || !data.assets["730"]["2"]) break;
+  for (let page = 0; page < maxPages; page++) {
+    const start = page * count;
+    const data = await fetchSearchPage(`${weapon} |`, start, count);
 
-    const appAssets = data.assets["730"]["2"];
-    for (const assetId in appAssets) {
-      const item = appAssets[assetId];
-      const name = item.market_hash_name || item.name || '';
-      if (name.startsWith(`${weaponName} | `)) {
-        const skin = name.split(`${weaponName} | `)[1];
-        if (skin) skins.add(skin.trim());
-      }
+    if (!data || !data.results_html) {
+      console.warn(`⚠️ Página ${page + 1} vazia ou erro.`);
+      break;
     }
 
-    if (!data.total_count || start + count >= data.total_count) break;
+    const $ = cheerio.load(data.results_html);
+    const items = $('span.market_listing_item_name');
 
-    start += count;
-    page++;
+    if (items.length === 0) break; // Fim da lista
+
+    items.each((_, el) => {
+      const fullName = $(el).text().trim(); // Ex: "AK-47 | Redline (Gasto)"
+      const match = fullName.match(/^(.+?) \| (.+?) \((.+?)\)$/);
+
+      if (match) {
+        const skin = match[2].trim();
+        const desgaste = match[3].trim();
+
+        if (!skinMap.has(skin)) skinMap.set(skin, new Set());
+        skinMap.get(skin).add(desgaste);
+      }
+    });
   }
 
-  return Array.from(skins).sort();
+  return skinMap;
 }
-
-module.exports = { listSkinsForWeapon };
