@@ -52,3 +52,41 @@
   font-size: 1.1rem;
   font-weight: 600;
 }
+
+.skin-card {
+  position: relative; 
+}
+
+/* Estilo para a tag StatTrak™ */
+.stattrak-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff8c00; /* Laranja típico do StatTrak */
+  color: var(--color-text-bright);
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Estilo para a barra de estado (wear) */
+.wear-indicator {
+  padding: 4px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-bright);
+  background-color: rgba(42, 71, 94, 0.5); /* Cor de fundo --color-bg-lighter com transparência */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Ajuste na imagem para garantir que não ultrapassa os cantos arredondados */
+.skin-card-image {
+  width: 100%;
+  max-width: 180px; /* Aumentado para acomodar a imagem de maior qualidade */
+  height: auto;
+  object-fit: contain;
+}

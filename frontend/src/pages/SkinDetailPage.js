@@ -4,16 +4,17 @@ import { getSkinDetails } from '../api/Skins';
 import './SkinDetailPage.css';
 
 const SkinDetailPage = () => {
-  // 1. Obter o parâmetro da URL
   const { marketHashName } = useParams();
   
   const [skinData, setSkinData] = useState(null);
   const [listings, setListings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
+  // Guardar o URL da imagem base para usar na tabela
+  const [baseSkinImageUrl, setBaseSkinImageUrl] = useState('');
 
   useEffect(() => {
-    // Função para carregar os dados
     const fetchSkinData = async () => {
       setLoading(true);
       setError(null);
@@ -22,9 +23,17 @@ const SkinDetailPage = () => {
       
       if (data && data.success) {
         setSkinData(data);
-        // Os listings estão dentro de data.listinginfo
         const formattedListings = Object.values(data.listinginfo || {});
         setListings(formattedListings);
+
+        // Extrai e guarda o URL do ícone da skin para usar na tabela
+        // Assume que o primeiro asset é representativo
+        const assetKey = Object.keys(data.assets || {})[0];
+        if (assetKey) {
+            const iconUrl = data.assets[assetKey].icon_url;
+            setBaseSkinImageUrl(`https://community.cloudflare.steamstatic.com/economy/image/${iconUrl}`);
+        }
+
       } else {
         setError("Não foi possível carregar os dados desta skin.");
       }
@@ -33,7 +42,7 @@ const SkinDetailPage = () => {
     };
 
     fetchSkinData();
-  }, [marketHashName]); // <-- Executa sempre que o nome da skin na URL mudar
+  }, [marketHashName]);
 
   if (loading) {
     return <div className="loader">A carregar detalhes da skin...</div>;
@@ -46,7 +55,6 @@ const SkinDetailPage = () => {
   return (
     <div className="skin-detail-page">
       <div className="skin-info-column">
-        {/* Adicionar aqui a imagem grande e informações gerais quando o backend as fornecer */}
         <h1>{decodeURIComponent(marketHashName)}</h1>
         <div className="skin-image-large-container">
           <img 
@@ -54,6 +62,7 @@ const SkinDetailPage = () => {
             alt={decodeURIComponent(marketHashName)}
           />
         </div>
+        {/* Futuramente pode adicionar aqui mais detalhes como float, pattern, etc. */}
       </div>
 
       <div className="skin-listings-column">
@@ -62,9 +71,11 @@ const SkinDetailPage = () => {
           <table className="listings-table">
             <thead>
               <tr>
+                {/* NOVA COLUNA PARA A IMAGEM */}
+                <th>Skin</th>
                 <th>Preço</th>
-                <th>Float</th>
-                <th>Pattern</th>
+                <th className="placeholder-data">Float</th>
+                <th className="placeholder-data">Pattern</th>
                 <th>Ação</th>
               </tr>
             </thead>
@@ -72,7 +83,15 @@ const SkinDetailPage = () => {
               {listings.length > 0 ? (
                 listings.map(listing => (
                   <tr key={listing.listingid}>
-                    <td>{listing.converted_price_per_unit / 100} {listing.converted_currency_symbol}</td>
+                    {/* CELULA COM A IMAGEM DA SKIN */}
+                    <td>
+                      <img 
+                        src={baseSkinImageUrl} 
+                        alt="skin" 
+                        className="listing-skin-image" 
+                      />
+                    </td>
+                    <td>{(listing.converted_price_per_unit / 100).toFixed(2)} {listing.converted_currency_symbol}</td>
                     <td className="placeholder-data">N/A</td>
                     <td className="placeholder-data">N/A</td>
                     <td>
@@ -82,14 +101,14 @@ const SkinDetailPage = () => {
                         rel="noopener noreferrer" 
                         className="buy-button"
                       >
-                        Ver no Mercado
+                        Ver
                       </a>
                     </td>
                   </tr>
                 ))
               ) : (
                 <tr>
-                  <td colSpan="4">Nenhum listing encontrado.</td>
+                  <td colSpan="5">Nenhum listing encontrado.</td>
                 </tr>
               )}
             </tbody>

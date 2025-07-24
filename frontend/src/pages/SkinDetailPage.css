@@ -77,3 +77,23 @@
   background-color: #8dd1f9;
   color: var(--color-bg-dark);
 }
+
+/* Estilo para a imagem da skin dentro da tabela de listings */
+.listing-skin-image {
+  width: 96px; /* Tamanho bom para uma linha de tabela */
+  height: auto;
+  object-fit: contain;
+  background-color: #000; /* Fundo escuro para a imagem se destacar */
+  border-radius: 4px;
+  vertical-align: middle; /* Alinha a imagem verticalmente com o texto */
+}
+
+/* Altera o texto do botão de compra para algo mais curto */
+.buy-button {
+  padding: 0.5rem 1.2rem;
+}
+
+/* Centraliza o conteúdo das células da tabela para um melhor alinhamento */
+.listings-table td {
+  vertical-align: middle;
+}
