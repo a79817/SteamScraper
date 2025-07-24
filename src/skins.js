@@ -41,3 +41,18 @@ async function listAllSkinsWithWear(weapon) {
 
   return skinMap;
 }
+
+(async () => {
+  const weapon = 'AK-47';
+  const resultado = await listAllSkinsWithWear(weapon);
+
+  const skinsOrdenadas = [...resultado.keys()].sort();
+  console.log(`\n🎯 Skins e desgastes disponíveis para "${weapon}":\n`);
+
+  for (const skin of skinsOrdenadas) {
+    const desgastes = [...resultado.get(skin)].sort();
+    console.log(`- ${weapon} | ${skin}: ${desgastes.join(', ')}`);
+  }
+
+  console.log(`\n🧾 Total de skins diferentes: ${skinsOrdenadas.length}`);
+})();
