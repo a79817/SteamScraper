@@ -1,58 +1,72 @@
-const { fetchSearchPage } = require('./fetch');
+const express = require('express');
+const cors = require('cors');
 const cheerio = require('cheerio');
+const { fetchSearchPage } = require('./fetch');
+
+const app = express();
+app.use(cors());
 
 /**
  * Extrai todas as skins de uma arma e os respetivos estados de desgaste.
- * @param {string} weapon - Nome da arma (ex: "AK-47")
- * @returns {Promise<Map<string, Set<string>>>}
  */
-async function listAllSkinsWithWear(weapon) {
+async function listAllSkinsWithWear(weapon, exactSkin = null) {
   const skinMap = new Map();
-  const maxPages = Infinity; // Segurança extra, Steam mostra 43 no máximo
-  const count = 10; // Steam limita a 10 resultados por página
+  const maxPages = Infinity;
+  const count = 10;
 
   for (let page = 0; page < maxPages; page++) {
     const start = page * count;
     const data = await fetchSearchPage(`${weapon} |`, start, count);
 
-    if (!data || !data.results_html) {
-      console.warn(`⚠️ Página ${page + 1} vazia ou erro.`);
-      break;
-    }
+    if (!data || !data.results_html) break;
 
     const $ = cheerio.load(data.results_html);
     const items = $('span.market_listing_item_name');
 
-    if (items.length === 0) break; // Fim da lista
+    if (items.length === 0) break;
 
     items.each((_, el) => {
-      const fullName = $(el).text().trim(); // Ex: "AK-47 | Redline (Gasto)"
+      const fullName = $(el).text().trim();
       const match = fullName.match(/^(.+?) \| (.+?) \((.+?)\)$/);
 
       if (match) {
         const skin = match[2].trim();
         const desgaste = match[3].trim();
 
+        if (exactSkin && skin !== exactSkin) return;
+
         if (!skinMap.has(skin)) skinMap.set(skin, new Set());
         skinMap.get(skin).add(desgaste);
       }
     });
+
+    // Para pesquisa exata, para quando encontrar a skin
+    if (exactSkin && skinMap.size > 0) break;
   }
 
-  return skinMap;
+  return [...skinMap.entries()].map(([skin, desgastes]) => ({
+    skin,
+    desgastes: [...desgastes],
+  }));
 }
 
-(async () => {
-  const weapon = 'AK-47';
-  const resultado = await listAllSkinsWithWear(weapon);
 
-  const skinsOrdenadas = [...resultado.keys()].sort();
-  console.log(`\n🎯 Skins e desgastes disponíveis para "${weapon}":\n`);
+app.get('/api/skins', async (req, res) => {
+  const weapon = req.query.weapon;
+  const exactSkin = req.query.skin; // skin específica, ex: "Cartel"
 
-  for (const skin of skinsOrdenadas) {
-    const desgastes = [...resultado.get(skin)].sort();
-    console.log(`- ${weapon} | ${skin}: ${desgastes.join(', ')}`);
+  if (!weapon) return res.status(400).json({ error: 'Parâmetro "weapon" em falta.' });
+
+  try {
+    const skins = await listAllSkinsWithWear(weapon, exactSkin);
+    res.json({ weapon, skins });
+  } catch (err) {
+    res.status(500).json({ error: 'Erro ao obter skins.', detalhe: err.message });
   }
+});
 
-  console.log(`\n🧾 Total de skins diferentes: ${skinsOrdenadas.length}`);
-})();
+
+const PORT = 3001;
+app.listen(PORT, () => {
+  console.log(`✅ API a correr em http://localhost:${PORT}/api/skins?weapon=AK-47`);
+});
